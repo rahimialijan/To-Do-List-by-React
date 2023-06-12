@@ -1,13 +1,10 @@
-import React from 'react';
-import './App.css';
-import Calculator from './components/Calculator';
-import Quotes from './components/quotes';
+import Table from "./components/Table";
+import "./App.css";
 
 function App() {
   return (
-    <div className="container">
-      <Quotes />
-      <Calculator />
+    <div className="App">
+     hello world
     </div>
   );
 }
