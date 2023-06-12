@@ -13,3 +13,32 @@
   height: 100vh;
   background-color: #faf9f6;
 }
+
+.btn{
+  margin-top: 1rem;
+  background-color: #1d4ed8;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px #ccc;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.form-group label{
+  margin-bottom: 0.2rem;
+}
