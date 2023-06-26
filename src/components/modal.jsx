@@ -7,7 +7,7 @@ const Modal = ({ closeModal, onSubmit, defaultValue }) => {
     defaultValue || {
       page: '',
       description: '',
-      status: 'Live',
+      status: 'live', // Updated default value to match the value of the first option
     },
   );
   const [errorMsg, setErrorMsg] = useState('');
@@ -45,10 +45,13 @@ const Modal = ({ closeModal, onSubmit, defaultValue }) => {
     if (e.key === 'Enter') {
       closeModal();
     }
+    if (e.key === ' ') {
+      e.stopPropagation();
+    }
   };
 
   return (
-    <button
+    <div
       className="modal-container"
       onClick={(e) => {
         if (e.target.className === 'modal-container') {
@@ -56,7 +59,8 @@ const Modal = ({ closeModal, onSubmit, defaultValue }) => {
         }
       }}
       onKeyDown={handleKeyDown}
-      type="button"
+      role="button"
+      tabIndex={0}
     >
       <div className="modal">
         <form>
@@ -118,7 +122,7 @@ const Modal = ({ closeModal, onSubmit, defaultValue }) => {
         type="button"
         aria-label="Close"
       />
-    </button>
+    </div>
   );
 };
 

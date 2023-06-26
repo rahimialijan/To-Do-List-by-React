@@ -9,7 +9,9 @@
   position: fixed;
   z-index: 10;
 }
-
+#page, #description, #status{
+  width: 100%;
+}
 .modal {
   width: 25em;
   background-color: white;
